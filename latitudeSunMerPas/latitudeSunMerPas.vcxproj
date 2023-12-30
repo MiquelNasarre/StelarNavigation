@@ -98,7 +98,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(CoreLibraryDependencies);CF.lib</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);CF_d.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)CommonFunctions/lib/</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -134,7 +134,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(CoreLibraryDependencies);CF.lib</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);CF_d.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)CommonFunctions/lib/</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

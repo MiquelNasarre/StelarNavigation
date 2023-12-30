@@ -39,6 +39,8 @@ void polarLatitude()
 
 float calculateLatitude(float a, float gh, float L)
 {
+	//	The sideric angle and declination is data obtained for the almanach for December 2023
+
 	float sa = 314.f + 3.7f / 60.f;
 	float d = 89.f + 22.1f / 60.f;
 
@@ -50,13 +52,13 @@ float calculateLatitude(float a, float gh, float L)
 	if (h > 180)
 		h = 360 - h;
 
-	h *= 2.f * 3.141592f / 360.f;
-	d *= 2.f * 3.141592f / 360.f;
-	a *= 2.f * 3.141592f / 360.f;
+	h *= deg_rad;
+	d *= deg_rad;
+	a *= deg_rad;
 
 	float t = asinf(sinf(h) / cosf(a) * cosf(d));
 
-	float l = 90.f - 360.f / 3.141592f * atanf(cosf((t + h) / 2.f) / cosf((t - h) / 2.f) / tanf((d + a) / 2.f));
+	float l = 90.f - 2 * rad_deg * atanf(cosf((t + h) / 2.f) / cosf((t - h) / 2.f) / tanf((d + a) / 2.f));
 	
 
 	return l;

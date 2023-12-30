@@ -32,31 +32,6 @@ float* inputCoor()
 	return angles;
 }
 
-float* inputStar()
-{
-	float* angles = (float*)calloc(2, sizeof(float));
-
-	float deg, min;
-
-	printf("Hour angle:\t");
-	scanf("%f %f", &deg, &min);
-
-	if (deg >= 0.f)
-		angles[0] = deg + min / 60.f;
-	else
-		angles[0] = deg - min / 60.f;
-
-	printf("Declination:\t");
-	scanf("%f %f", &deg, &min);
-
-	if (deg >= 0.f)
-		angles[1] = deg + min / 60.f;
-	else
-		angles[1] = deg - min / 60.f;
-
-	return angles;
-}
-
 float inputTime(const char* text, bool seconds)
 {
 	float hour, min, sec;

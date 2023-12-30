@@ -73,7 +73,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(ProjectDir)lib/</OutDir>
     <IntDir>$(SolutionDir).intermediate/$(ProjectName)/$(Configuration)/$(Platform)/</IntDir>
-    <TargetName>CF</TargetName>
+    <TargetName>CF_d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(ProjectDir)lib/</OutDir>
@@ -83,7 +83,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(ProjectDir)lib/</OutDir>
     <IntDir>$(SolutionDir).intermediate/$(ProjectName)/$(Configuration)/$(Platform)/</IntDir>
-    <TargetName>CF</TargetName>
+    <TargetName>CF_d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(ProjectDir)lib/</OutDir>

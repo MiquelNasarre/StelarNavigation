@@ -74,7 +74,7 @@ void calculateLatitude()
 	printf("DEC\t");
 	scanf("%f %f", &d1, &d1min);
 
-	float t = inputTime("\nCURRENT TIME\t", true);
+	float t = inputTime("\nCURRENT TIME\t");
 
 	if (d0 >= 0)
 		d0 += d0min / 60.f;
@@ -89,9 +89,6 @@ void calculateLatitude()
 	if (t0 > t1)
 		t1 += 24.f;
 
-	if (d0 > d1)
-		d1 += 360.f;
-
 	float d = (d1 * (t - t0) - d0 * (t - t1)) / (t1 - t0);
 
 	float a, amin;
@@ -101,5 +98,20 @@ void calculateLatitude()
 
 	a += amin / 60.f;
 
-	
+	float l = 90 - a + d;
+
+	char c = 'N';
+	if (l < 0)
+	{
+		c = 'S';
+		l *= -1;
+	}
+
+	printf(
+		"\nYOUR LATITUDE\n"
+		"%.3f%c %c\t%i%c %.2f%c %c\n"
+		, l, 248, c
+		, int(l), 248, (l - int(l)) * 60.f, '\'', c
+	);
+
 }

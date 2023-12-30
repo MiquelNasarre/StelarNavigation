@@ -14,7 +14,7 @@ float* tripCalculator(bool simple)
 
 	if (!simple)
 		printf(
-			"To be able to calculate your estimated position we're going to need multiple\n"
+			"\nTo be able to calculate your estimated position we're going to need multiple\n"
 			"things. First your last known position, the time it was at that moment, the\n"
 			"boat speed and the course.\n"
 			"Once that is known we can add as many legs as needed providing speeds, direction\n"
@@ -81,13 +81,13 @@ float* tripCalculator(bool simple)
 		float v = speed;
 		float li = Coor[0];
 		float Li = Coor[1];
-		float c = 2.f * 3.141592f / 360.f * course;
+		float c = deg_rad * course;
 
 		float d = v * dt;
 		float dl = d * cosf(c) / 60.f;
 		float lf = li + dl;
 
-		float dL = d * sinf(c) / cosf(((li + lf) / 2.f) * 2.f * 3.141592f / 360.f) / 60.f;
+		float dL = d * sinf(c) / cosf(((li + lf) / 2.f) * deg_rad) / 60.f;
 		float Lf = Li - dL;
 
 		if (lf > 90 || lf < -90)

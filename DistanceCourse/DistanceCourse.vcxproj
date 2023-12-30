@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{0ef41768-4100-4bef-8588-2b34953842ab}</ProjectGuid>
-    <RootNamespace>EstimatedPosition</RootNamespace>
+    <ProjectGuid>{8f3a49ba-2bde-46d1-963e-3a6496b5a817}</ProjectGuid>
+    <RootNamespace>DistanceCourse</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

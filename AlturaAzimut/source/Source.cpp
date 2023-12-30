@@ -21,11 +21,11 @@ float altitudeF(float l, float L, float d, float h)
 		P = h - L;
 
 
-	l *= 2 * 3.141592f / 360.f;
-	L *= 2 * 3.141592f / 360.f;
-	d *= 2 * 3.141592f / 360.f;
-	P *= 2 * 3.141592f / 360.f;
-	return 360.f / 2 / 3.141592f * asinf(sinf(d) * sinf(l) + cosf(l) * cosf(d) * cosf(P));
+	l *= deg_rad;
+	L *= deg_rad;
+	d *= deg_rad;
+	P *= deg_rad;
+	return rad_deg * asinf(sinf(d) * sinf(l) + cosf(l) * cosf(d) * cosf(P));
 }
 
 float azimuthF(float l, float L, float d, float h)
@@ -55,12 +55,12 @@ float azimuthF(float l, float L, float d, float h)
 		Case = true;
 	}
 
-	l *= 2 * 3.141592f / 360.f;
-	L *= 2 * 3.141592f / 360.f;
-	d *= 2 * 3.141592f / 360.f;
-	P *= 2 * 3.141592f / 360.f;
+	l *= deg_rad;
+	L *= deg_rad;
+	d *= deg_rad;
+	P *= deg_rad;
 
-	float Z = 360.f / 2 / 3.141592f * atanf(sinf(P) / (tanf(d) * cosf(l) - sinf(l) * cosf(P)));
+	float Z = rad_deg * atanf(sinf(P) / (tanf(d) * cosf(l) - sinf(l) * cosf(P)));
 
 	if (Z < 0)
 		Z += 180.f;
